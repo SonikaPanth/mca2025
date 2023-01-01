@@ -1,3 +1,5 @@
+//problem 1:star pattern
+
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
@@ -20,4 +22,23 @@ int main()
     }
     return 0;
     
+}
+
+
+//PROBLEM2: GFG
+
+vector<int> minAnd2ndMin(int a[], int n) {
+    sort(a,a+n);
+    vector<int>v;
+    v.push_back(a[0]);
+    for(int i=1;i<n;i++)
+    {
+        if(a[i-1]!=a[i])
+        {
+            v.push_back(a[i]);
+            return v;
+        }
+    }
+    return {-1};
+
 }

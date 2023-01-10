@@ -1,1 +1,43 @@
+Task 1: Wave array
 
+void convertToWave(int n, vector<int>& arr){
+        if(n%2!=0)
+        {
+            arr.insert(arr.end(),arr[n-1]);
+        }
+        for(int i=0;i<n;i+=2)
+        {
+            swap(arr[i],arr[i+1]);
+        }
+        
+        
+        
+  Task 2: reverse the word in a given string
+  
+  string reverseWords(string S) 
+    { 
+        string res="";
+        string word="";
+        vector<string>v;
+        for(int i=0;i<S.length();++i)
+        {
+            if(S[i]=='.'){
+                v.push_back(word);
+                word="";
+                }
+                else{
+                    word+=S[i];}
+                
+                
+        }
+        v.push_back(word);
+        
+        for(int i=v.size()-1;i>=0;--i)
+        {
+            res+=v[i];
+            if(i!=0)
+            res+='.';
+        }
+        return res;
+       
+    } 

@@ -1,1 +1,42 @@
+TASK 1: Duplicate zeroes
 
+void duplicateZeros(vector<int>& arr) {
+        
+        vector<int>v;
+        
+        for(int i=0;i<arr.size();i++)
+        {
+            if(arr[i]==0)
+            {
+             v.push_back(0);
+             v.push_back(0);
+            }
+            else
+            v.push_back(arr[i]);
+        }
+        for(int i=0;i<arr.size();i++)
+        arr[i]=v[i];
+    }
+
+
+TASK 2: intersection of two arrays
+
+vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        set<int>v;
+        
+        
+        for(int i=0;i<nums1.size();i++)
+        {
+            for(int j=0;j<nums2.size();j++)
+            {
+                if(nums1[i]==nums2[j])
+                v.insert(nums1[i]);
+                
+                
+            }
+         
+        }
+         vector<int>v1(v.begin(),v.end());
+    return v1;
+    }
+   
